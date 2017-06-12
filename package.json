@@ -1,0 +1,31 @@
+{
+  "name": "rebase-with-history",
+  "version": "1.0.0",
+  "description": "Simple tool that adds the picked commit into the commit message",
+  "main": "bin/rwh.sh",
+  "bin": {
+    "rebase-with-history": "rwh.js"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DeuxHuitHuit/rebase-with-history.git"
+  },
+  "keywords": [
+    "git",
+    "rebase",
+    "history"
+  ],
+  "author": "deuxhuithuit <npm@deuxhuithuit.com> (https://deuxhuithuit.com/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/DeuxHuitHuit/rebase-with-history/issues"
+  },
+  "homepage": "https://github.com/DeuxHuitHuit/rebase-with-history#readme",
+  "dependencies": {
+    "event-stream": "^3.3.4",
+    "yargs": "^8.0.1"
+  }
+}

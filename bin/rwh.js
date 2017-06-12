@@ -29,13 +29,21 @@ const strategies = {
 				throw new Error(`File ${RWH_NEXT_PICK} is empty`);
 			}
 			const lastIndex = lines.length - 1;
-			const lastLine = lines[lastIndex];
-			if (lastLine.length != 0) {
+			let lastLine = lines[lastIndex];
+			// Make sure we have an empty line at the end
+			if (lastLine.length !== 0 && !/^\s*$/.test(lastLine)) {
+				console.info('Added missing empty line');
 				lines.push('');
-			}
-			if (lastLine.indexOf(pickPrefix) !== 0) {
-				lines[lastIndex] += `${pickPrefix} ${commit}`;
 			} else {
+				console.info('Last line is empty');
+				lastLine = lines[lastIndex - 1];
+			}
+			// Append line if last line is not a pick
+			if (lastLine.indexOf(pickPrefix) !== 0) {
+				console.info('Last line is NOT a pick');
+				lines.push(`${pickPrefix} ${commit}`);
+			} else {
+				console.info('Last line is a pick');
 				lines[lastIndex] = `${pickPrefix} ${commit}`;
 			}
 		},

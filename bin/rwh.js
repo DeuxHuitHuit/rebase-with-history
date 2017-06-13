@@ -54,7 +54,7 @@ const strategies = {
 	},
 	rebase: {
 		line: function (line) {
-			line = line.replace(/^pick ([a-f0-9]+) (.+)$/, `x sh -c "echo $1 > ${RWH_NEXT_PICK}"\nr $1 $2`);
+			line = line.replace(/^pick ([a-f0-9]+) (.+)$/, `x sh -c "echo $1 > '${RWH_NEXT_PICK}'"\nr $1 $2`);
 			lines.push(line);
 		},
 		endReached: function () {},

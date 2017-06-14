@@ -2,16 +2,23 @@
 
 'use strict';
 
+const pkg = require('../package.json');
 const fs = require('fs');
 const stream = require('stream');
 const es = require('event-stream');
 const yargs = require('yargs');
+const argv = yargs
+	.demand(1)
+	.usage('Usage: $0 [commit or rebase file]\n       $0 --continue | --version')
+	.help('h')
+	.alias('h', ['?', 'help'])
+	.showHelpOnFail(true)
+	.boolean('continue')
+	.describe('continue', 'Continue the rebase operation')
+	.version(pkg.version + '\n')
+	.argv;
 
-if (process.argv.length !== 3) {
-	throw new Error(`Wrong count of arguments (${process.argv.length})`);
-}
-
-const file = process.argv[2];
+const file = argv._[0];
 const RWH_NEXT_PICK = file.replace(/^(.+)\.git\/(.+)$/,'$1.git/RWH_NEXT_PICK');
 let endReached = false;
 let lineNr = 0;

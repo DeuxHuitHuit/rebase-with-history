@@ -1,14 +1,12 @@
 #!/bin/sh
 
 ED="$(dirname $0)/rwh.js";
-echo $ED;
 GED="$GIT_EDITOR";
 
 for i in "$@"
 do
 case $i in
 	--continue)
-		shift # past argument=value
 		export GIT_EDITOR="${ED}";
 		git rebase --continue
 	;;
@@ -26,5 +24,9 @@ case $i in
 	;;
 esac
 done
+
+if [ -z "$1" ]; then
+	node $ED --help;
+fi
 
 export GIT_EDITOR=$GED;

@@ -9,7 +9,7 @@ const es = require('event-stream');
 const yargs = require('yargs');
 const argv = yargs
 	.demand(1)
-	.usage('Usage: $0 [commit or rebase file]\n       $0 --continue | --version')
+	.usage('Usage: rwh [branch]\n       rwh [--option]')
 	.help('h')
 	.alias('h', ['?', 'help'])
 	.showHelpOnFail(true)

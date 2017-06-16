@@ -3,8 +3,10 @@
   "version": "1.0.0",
   "description": "Simple tool that adds the picked commit into the commit message",
   "main": "bin/rwh.sh",
+  "preferGlobal": true,
   "bin": {
-    "rwh": "bin/rwh.sh"
+    "rwh": "bin/rwh.sh",
+    "rwh.js": "bin/rwh.js"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"

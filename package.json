@@ -1,10 +1,10 @@
 {
-  "name": "rebase-with-history",
+  "name": "rwh",
   "version": "1.0.0",
   "description": "Simple tool that adds the picked commit into the commit message",
   "main": "bin/rwh.sh",
   "bin": {
-    "rebase-with-history": "rwh.js"
+    "rwh": "bin/rwh.sh"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"

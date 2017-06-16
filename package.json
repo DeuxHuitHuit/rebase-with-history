@@ -1,6 +1,6 @@
 {
   "name": "rwh",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Simple tool that adds the picked commit into the commit message",
   "main": "bin/rwh.sh",
   "preferGlobal": true,

@@ -1,4 +1,4 @@
-# Rebase With History ![David DM](https://david-dm.org/DeuxHuitHuit/rebase-with-history.png) [![npm version](https://badge.fury.io/js/rebase-with-history.svg)](http://badge.fury.io/js/rebase-with-history)
+# Rebase With History ![David DM](https://david-dm.org/DeuxHuitHuit/rebase-with-history.png) [![npm version](https://badge.fury.io/js/rwh.svg)](http://badge.fury.io/js/rwh)
 
 > Simple tool that adds the picked commit into the commit message
 

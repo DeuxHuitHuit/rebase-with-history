@@ -10,6 +10,10 @@ case $i in
 		export GIT_EDITOR="${ED}";
 		git rebase --continue
 	;;
+	--skip)
+		export GIT_EDITOR="${ED}";
+		git rebase --skip
+	;;
 	--version)
 		node $ED --version;
 		exit;

@@ -22,6 +22,7 @@ Usage: rwh [branch]
 Options:
   -h, -?, --help  Show help                            [boolean]
   --continue      Continue the rebase operation        [boolean]
+  --skip          Skip the current commit and continue [boolean]
   --version       Show version number                  [boolean]
 ```
 

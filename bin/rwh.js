@@ -15,6 +15,8 @@ const argv = yargs
 	.showHelpOnFail(true)
 	.boolean('continue')
 	.describe('continue', 'Continue the rebase operation')
+	.boolean('skip')
+	.describe('skip', 'Skip the current commit and continue')
 	.version(pkg.version + '\n')
 	.argv;
 

@@ -112,3 +112,6 @@ const s = fs.createReadStream(file)
 			throw new Error('Empty file');
 		}
 	}));
+
+require('update-notifier')({pkg}).notify();
+

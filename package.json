@@ -26,6 +26,7 @@
   "homepage": "https://github.com/DeuxHuitHuit/rebase-with-history#readme",
   "dependencies": {
     "event-stream": "^3.3.4",
+    "update-notifier": "^2.2.0",
     "yargs": "^8.0.1"
   }
 }

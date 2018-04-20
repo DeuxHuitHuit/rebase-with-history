@@ -6,6 +6,10 @@ GED="$GIT_EDITOR";
 for i in "$@"
 do
 case $i in
+	--next)
+		export GIT_EDITOR="${ED}";
+		git commit
+	;&
 	--continue)
 		export GIT_EDITOR="${ED}";
 		git rebase --continue

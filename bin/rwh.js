@@ -17,6 +17,8 @@ const argv = yargs
 	.describe('continue', 'Continue the rebase operation')
 	.boolean('skip')
 	.describe('skip', 'Skip the current commit and continue')
+	.boolean('next')
+	.describe('next', 'Commits the current index and continue the rebase operation')
 	.version(pkg.version + '\n')
 	.argv;
 

@@ -49,4 +49,4 @@ Date:   Tue Jun 13 22:34:25 2017 -0400
 
 [MIT](https://deuxhuithuit.mit-license.org)    
 Made with love in Montréal by [Deux Huit Huit](https://deuxhuithuit.com)    
-Copyrights (c) 2017
+Copyrights (c) 2018

@@ -1,6 +1,6 @@
 {
   "name": "rwh",
-  "version": "1.0.2",
+  "version": "1.1.0",
   "description": "Simple tool that adds the picked commit into the commit message",
   "main": "bin/rwh.sh",
   "preferGlobal": true,
@@ -28,7 +28,7 @@
   "homepage": "https://github.com/DeuxHuitHuit/rebase-with-history#readme",
   "dependencies": {
     "event-stream": "^3.3.4",
-    "update-notifier": "^2.2.0",
-    "yargs": "^8.0.1"
+    "update-notifier": "^2.5.0",
+    "yargs": "^11.0.0"
   }
 }

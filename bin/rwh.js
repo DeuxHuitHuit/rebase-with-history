@@ -23,7 +23,8 @@ const argv = yargs
 	.argv;
 
 const file = argv._[0];
-const RWH_NEXT_PICK = file.replace(/^(.+)\.git\/(.+)$/,'$1.git/RWH_NEXT_PICK');
+const GIT_FOLDER_REGEXP = /^(.+)\.git\/(.+)$/;
+const RWH_NEXT_PICK = file.replace(GIT_FOLDER_REGEXP,'$1.git/RWH_NEXT_PICK');
 let endReached = false;
 let lineNr = 0;
 const lines = [];
@@ -46,7 +47,7 @@ const strategies = {
 				console.info('Added missing empty line');
 				lines.push('');
 			} else {
-				console.info('Last line is empty');
+				console.info('Last line is empty: no need to add one.');
 				lastLine = lines[lastIndex - 1];
 			}
 			// Append line if last line is not a pick
@@ -59,8 +60,8 @@ const strategies = {
 			}
 		},
 		end: function () {
-			fs.unlinkSync(`${RWH_NEXT_PICK}`);
-			console.log('Commit reword\'ed successfully');
+			fs.unlinkSync(RWH_NEXT_PICK);
+			console.log(`Commit reworded successfully`);
 		}
 	},
 	rebase: {
